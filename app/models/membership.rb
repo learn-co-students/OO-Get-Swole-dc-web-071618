@@ -1,12 +1,16 @@
 class Membership
+  attr_accessor :cost, :gym, :lifter
 
+  ALL = []
 
-  attr_reader :cost
-
-  def initialize(cost)
+  def initialize(lifter, gym, cost)
+    @lifter = lifter
+    @gym = gym
     @cost = cost
+    ALL << self
   end
 
-
-
+  def self.all
+    ALL
+  end
 end
